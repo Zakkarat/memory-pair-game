@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/back.jpg );
+  background-size: cover;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+.container {
+  display: flex;
+  width: 50%;
+  height: 30%;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  max-height: 400px;
+  background-color: #032333;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 8px 5px 16px 3px;
+}
+
+.flip-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+	perspective: 1000px;
+}
+
+	.toFlip{
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 117px;
+	height: 249px;
+}
+
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+}
